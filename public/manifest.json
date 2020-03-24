@@ -1,7 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "AtCoder non AC notifier",
-  "version": "1.0.0",
+  "name": "AtCoder judge notifier",
+  "description": "A Chrome extension to notify the result of the submission on AtCoder",
+  "version": "0.1.0",
   "permissions": [
     "notifications",
     "tabs"
@@ -12,7 +13,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://atcoder.jp/"],
+      "matches": ["https://atcoder.jp/contests/*/submissions/me"],
       "js": ["content-scripts.js"]
     }
   ]
