@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "AtCoder non AC notifier",
+  "version": "1.0.0",
+  "permissions": [
+    "notifications",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://atcoder.jp/"],
+      "js": ["content-scripts.js"]
+    }
+  ]
+}
