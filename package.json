@@ -25,5 +25,18 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix --cache"
+    ],
+    "*.{md,json,yaml,yml}": [
+      "prettier --write"
+    ]
   }
 }
