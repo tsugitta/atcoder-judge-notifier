@@ -3,8 +3,13 @@ import { Message } from './background'
 const judgingImageSrc = '//img.atcoder.jp/assets/icon/waiting.gif'
 const judgingImageSelector = `img[src='${judgingImageSrc}']`
 const labelSelector = '.label'
-const labelTitlesToBeIgnored = ['ジャッジ待ち', 'ジャッジ中']
-const acLabelTitle = '正解'
+const labelTitlesToBeIgnored = [
+  'ジャッジ待ち',
+  'ジャッジ中',
+  'Waiting for Judging',
+  'Judging',
+]
+const acLabelTitles = ['正解', 'Accepted']
 const interval = 500
 
 const judgingTrElements = ([].slice.call(
@@ -41,7 +46,7 @@ const id = setInterval(() => {
     const message: Message = {
       title: labelElement.innerText,
       body: getProblemNameFromTrElement(trElement),
-      ok: labelTitle === acLabelTitle,
+      ok: acLabelTitles.includes(labelTitle),
     }
 
     chrome.runtime.sendMessage(message)
