@@ -4,6 +4,8 @@
 
 AtCoder における提出のジャッジ結果を通知する Chrome 拡張機能です。
 
+[インストール](https://chrome.google.com/webstore/detail/atcoder-judge-notifier/hcjjfcidaloadjcemebolmdphhbpehba)
+
 ![TLE](https://user-images.githubusercontent.com/8144911/77526337-c2933600-6ecd-11ea-99a8-a1f412d28d9c.png)
 ![AC](https://user-images.githubusercontent.com/8144911/77526347-c45cf980-6ecd-11ea-8334-7ef514c9fc30.png)
 
