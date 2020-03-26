@@ -1,12 +1,10 @@
 {
   "manifest_version": 2,
   "name": "AtCoder judge notifier",
-  "description": "A Chrome extension to notify the result of the submission on AtCoder",
+  "description": "__MSG_ext_description__",
   "version": "0.1.0",
-  "permissions": [
-    "notifications",
-    "tabs"
-  ],
+  "default_locale": "en",
+  "permissions": ["notifications", "tabs"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
