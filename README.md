@@ -11,10 +11,8 @@ A Chrome extension to notify the result of the submission on AtCoder
 
 ## Behavior
 
-This extension shows a desktop notification with a sound when all the following conditions are satisfied.
-
-- a submission page `https://atcoder.jp/contests/****/submissions/me` was opened and there were submissions that are waiting for judge or judging.
-- the judge showed the result during judge or after judge, and at that time the tab is not active or the browser's window is not active.
+This extension shows a desktop notification with a sound about the judge of submissions that are waiting for judge or judging when the submission page `https://atcoder.jp/contests/****/submissions/me` was opened.
+The notification won't be shown if the tab and its window is active.
 
 you can make the tab active by clicking the notification.
 
