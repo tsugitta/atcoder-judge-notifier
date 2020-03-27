@@ -17,7 +17,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://atcoder.jp/contests/*/submissions/me"],
+      "matches": ["https://atcoder.jp/contests/*/submissions/me*"],
       "js": ["content-scripts.js"]
     }
   ]
