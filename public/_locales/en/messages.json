@@ -1,5 +1,17 @@
 {
   "ext_description": {
     "message": "A Chrome extension to notify the result of the submission on AtCoder"
+  },
+  "config_enable_extension": {
+    "message": "Enable"
+  },
+  "config_disable_extension": {
+    "message": "Disable"
+  },
+  "config_enable_sound": {
+    "message": "Enable sound"
+  },
+  "config_disable_sound": {
+    "message": "Disable sound"
   }
 }

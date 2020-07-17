@@ -1,3 +1,6 @@
+import { getConfig } from './config'
+import { createMenu, refreshMenu } from './menu'
+
 const generateId = () => String(Math.random())
 
 export type Message = {
@@ -6,15 +9,25 @@ export type Message = {
   ok: boolean
 }
 
-const notify = ({
+const notify = async ({
   notificationId,
   message,
 }: {
   notificationId: string
   message: Message
 }) => {
-  const audio = new Audio('./notification.mp3')
-  audio.play()
+  const extensionEnabled = await getConfig('Enabled')
+
+  if (!extensionEnabled) {
+    return
+  }
+
+  const soundEnabled = await getConfig('SoundEnabled')
+
+  if (soundEnabled) {
+    const audio = new Audio('./notification.mp3')
+    audio.play()
+  }
 
   chrome.notifications.create(notificationId, {
     type: 'basic',
@@ -58,3 +71,11 @@ chrome.runtime.onMessage.addListener(
     })
   },
 )
+
+chrome.runtime.onInstalled.addListener(() => {
+  createMenu()
+})
+
+chrome.storage.onChanged.addListener(changes => {
+  refreshMenu()
+})

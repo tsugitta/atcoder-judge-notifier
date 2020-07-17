@@ -1,5 +1,17 @@
 {
   "ext_description": {
     "message": "AtCoder における提出のジャッジ結果を通知する Chrome 拡張機能です。"
+  },
+  "config_enable_extension": {
+    "message": "有効にする"
+  },
+  "config_disable_extension": {
+    "message": "無効にする"
+  },
+  "config_enable_sound": {
+    "message": "サウンドを有効にする"
+  },
+  "config_disable_sound": {
+    "message": "サウンドを無効にする"
   }
 }
