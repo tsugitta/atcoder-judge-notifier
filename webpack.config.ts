@@ -22,7 +22,7 @@ const config: ConfigurationFactory = () => {
       ],
     },
     resolve: {
-      extensions: ['ts', 'js'],
+      extensions: ['.ts', '.js'],
     },
     plugins: [new CopyWebpackPlugin([{ from: 'public', to: '.' }])],
   }
