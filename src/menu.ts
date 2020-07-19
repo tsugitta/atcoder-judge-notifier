@@ -37,7 +37,6 @@ export const refreshMenu = async () => {
 
 chrome.contextMenus.onClicked.addListener(
   async ({ menuItemId }: { menuItemId: MenuId }) => {
-    // const handle = async () => {
     switch (menuItemId) {
       case 'ToggleEnabled': {
         const extensionEnabled = await getConfig('Enabled')
